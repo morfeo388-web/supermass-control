@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Super Mass · Control de mercancía</title>
+<meta name="description" content="Escanea facturas, recibe mercancía, verifica diferencias y controla caducidades de productos perecederos.">
+<meta name="theme-color" content="#0f7a4d">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Super Mass">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="views.css">
+<link rel="stylesheet" href="scanner.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#/inicio" aria-label="Ir al inicio">
+    <span class="brand-mark" id="brand-mark"></span>
+    <span class="brand-text"><strong>Super Mass</strong><small>Control de mercancía</small></span>
+  </a>
+  <button class="btn scan-cta" type="button" id="top-scan" aria-label="Escanear código"><span id="top-scan-icon"></span><span>Escanear</span></button>
+</header>
+
+<nav class="tabbar" aria-label="Navegación principal">
+  <a href="#/inicio" data-nav="inicio"><span data-icon="home"></span><span>Inicio</span></a>
+  <a href="#/facturas" data-nav="facturas"><span data-icon="invoice"></span><span>Facturas</span></a>
+  <a href="#/recepciones" data-nav="recepciones"><span data-icon="box"></span><span>Recibir</span></a>
+  <a href="#/caducidades" data-nav="caducidades"><span data-icon="clock"></span><span>Caducidades</span></a>
+  <a href="#/ajustes" data-nav="ajustes"><span data-icon="settings"></span><span>Ajustes</span></a>
+</nav>
+
+<main id="app" tabindex="-1"></main>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<dialog id="dlg" class="dlg" aria-label="Diálogo"></dialog>
+
+<div id="scanner" class="scanner" hidden>
+  <div class="scanner-sheet" role="dialog" aria-modal="true" aria-labelledby="scan-title">
+    <div class="scanner-head">
+      <strong id="scan-title">Escanear código</strong>
+      <button type="button" class="icon-btn" id="scan-close" aria-label="Cerrar escáner">✕</button>
+    </div>
+    <div id="scan-reader" class="scan-reader"></div>
+    <p class="scan-status" id="scan-status">Apunta la cámara al código de barras.</p>
+    <div class="scan-manual">
+      <input id="scan-manual-input" type="text" inputmode="numeric" autocomplete="off" placeholder="O escribe el código aquí" aria-label="Código manual">
+      <button type="button" class="btn secondary" id="scan-manual-btn">Usar</button>
+    </div>
+    <div id="scan-results" class="scan-results" hidden></div>
+    <button type="button" class="btn primary wide" id="scan-done">Cerrar</button>
+  </div>
+</div>
+
+<div id="print-area" aria-hidden="true"></div>
+
+<script src="vendor/html5-qrcode.min.js"></script>
+<script src="util.js"></script>
+<script src="scan.js"></script>
+<script src="dashboard.js"></script>
+<script src="invoices.js"></script>
+<script src="invoice-detail.js"></script>
+<script src="reception.js"></script>
+<script src="caducidades.js"></script>
+<script src="settings.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

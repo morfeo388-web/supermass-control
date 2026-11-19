@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Super Mass control de mercancía">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b6340"/>
+      <stop offset="1" stop-color="#128a56"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <rect x="132" y="96" width="248" height="300" rx="28" fill="#ffffff"/>
+  <rect x="168" y="140" width="108" height="18" rx="9" fill="#0f7a4d"/>
+  <rect x="168" y="182" width="176" height="14" rx="7" fill="#b9d8c7"/>
+  <rect x="168" y="216" width="150" height="14" rx="7" fill="#b9d8c7"/>
+  <rect x="168" y="250" width="176" height="14" rx="7" fill="#b9d8c7"/>
+  <rect x="168" y="284" width="120" height="14" rx="7" fill="#b9d8c7"/>
+  <circle cx="360" cy="368" r="84" fill="#f0a11b" stroke="#0b6340" stroke-width="10"/>
+  <circle cx="360" cy="368" r="62" fill="none" stroke="#ffffff" stroke-width="9" opacity=".55"/>
+  <path d="M360 330v42l28 18" fill="none" stroke="#ffffff" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
